@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+    <ApplicationIcon>ball.ico</ApplicationIcon>
+    <AssemblyName>florr_teach</AssemblyName>
+    <RootNamespace>FlorrTeach</RootNamespace>
+    <Version>1.0.0</Version>
+    <Company>florr_teach</Company>
+    <Product>florr_teach</Product>
+    <!-- 发布配置（方案2：框架依赖小本体发布）。
+         默认 SelfContained=false：产物仅应用本体，目标机需一次性安装 .NET 8 桌面运行时；
+         需要免运行时的自包含包时，在 publish 命令行用 self-contained true 覆盖。 -->
+    <PublishSingleFile>true</PublishSingleFile>
+    <SelfContained>false</SelfContained>
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+    <!-- 框架依赖单文件不支持压缩（NETSDK1176），必须关闭压缩 -->
+    <EnableCompressionInSingleFile>false</EnableCompressionInSingleFile>
+    <!-- 不产出调试符号 PDB，发布目录只保留 EXE -->
+    <DebugSymbols>false</DebugSymbols>
+    <DebugType>none</DebugType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Resource Include="ball.png" />
+  </ItemGroup>
+
+</Project>
