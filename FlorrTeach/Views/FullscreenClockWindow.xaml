@@ -1,0 +1,20 @@
+<Window x:Class="FlorrTeach.Views.FullscreenClockWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        WindowStyle="None"
+        Background="Black"
+        Topmost="True"
+        WindowState="Maximized"
+        Focusable="True">
+    <Grid>
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+            <TextBlock x:Name="TimeText" FontFamily="Consolas, Microsoft YaHei" FontWeight="Bold"
+                       Foreground="#f5f5f5" HorizontalAlignment="Center" FontSize="170"/>
+            <TextBlock x:Name="DateText" FontFamily="Microsoft YaHei" Foreground="#aaaaaa"
+                       HorizontalAlignment="Center" FontSize="38" Margin="0,24,0,0"/>
+        </StackPanel>
+        <TextBlock x:Name="TipText" Text="按任意键或点击鼠标退出全屏"
+                   FontFamily="Microsoft YaHei" Foreground="#888888" FontSize="18"
+                   HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,40"/>
+    </Grid>
+</Window>
