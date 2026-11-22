@@ -1,0 +1,46 @@
+<Window x:Class="FlorrTeach.Views.ModulePanelWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        Background="Transparent"
+        Topmost="True"
+        ShowInTaskbar="False"
+        ResizeMode="NoResize"
+        SizeToContent="WidthAndHeight">
+    <Window.Resources>
+        <Style x:Key="ModuleButtonStyle" TargetType="Button">
+            <Setter Property="MinWidth" Value="96"/>
+            <Setter Property="MinHeight" Value="44"/>
+            <Setter Property="FontSize" Value="13"/>
+            <Setter Property="Foreground" Value="#333333"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="Bd" Background="White" BorderBrush="#d4d4d4" BorderThickness="1"
+                                CornerRadius="7" Padding="8,6">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="Bd" Property="Background" Value="#eef4fb"/>
+                                <Setter TargetName="Bd" Property="BorderBrush" Value="#a8c8e8"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    <Border Background="#80FFFFFF" CornerRadius="12" Padding="8" Margin="1">
+        <UniformGrid Columns="3" Rows="2" Margin="0">
+            <Button x:Name="BtnTime" Content="时间" Style="{StaticResource ModuleButtonStyle}"/>
+            <Button x:Name="BtnServer" Content="服务器" Style="{StaticResource ModuleButtonStyle}"/>
+            <Button x:Name="BtnAi" Content="校园AI" Style="{StaticResource ModuleButtonStyle}"/>
+            <Button x:Name="BtnVolume" Content="音量" Style="{StaticResource ModuleButtonStyle}"/>
+            <Button x:Name="BtnRoll" Content="随机点名" Style="{StaticResource ModuleButtonStyle}"/>
+            <Button x:Name="BtnSettings" Content="设置" Style="{StaticResource ModuleButtonStyle}"/>
+        </UniformGrid>
+    </Border>
+</Window>
