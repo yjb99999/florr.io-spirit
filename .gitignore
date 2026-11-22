@@ -1,3 +1,13 @@
+# 构建产物
+bin/
+obj/
+publish/
+publish-frd/
+Output/
+*.pdb
+*.dll
+
+# 打包产物
 *.tar
 *.tar.*
 *.jar
@@ -9,6 +19,17 @@
 *.log
 *.log.*
 *.sig
+
+# 二进制素材（单独经 Release 分发）
+*.png
+*.ico
+
+# 个人数据（不入库）
+config.json
+name.txt
+clean.txt
+810name.txt
+810clean.txt
 
 pkg/
 src/
